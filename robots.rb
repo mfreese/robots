@@ -15,17 +15,19 @@ class Robot
         "My name is #{name}"
     end
 end
-class Bending_Unit < Robot
+class BendingUnit < Robot
     def bend(object_to_bend)
         "Bend #{object_to_bend} !!!!"
     end
 end
-class Actor_Unit < Robot
+class ActorUnit < Robot
     def change_name(change_name)
         self.name = change_name
     end
 end
-
-new_file = File.open('./index.html', 'w+')
+robot_name=ARGV[0]
+new_object=BendingUnit.new(ARGV[0])
+bend=ARGV[1]
+new_file = File.open("./#{robot_name}.html", 'w+')
 new_file << ERB.new(File.read('index.html.erb')).result(binding)
 new_file.close
