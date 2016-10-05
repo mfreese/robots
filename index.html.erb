@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Build Robots</title>
+  </head>
+  <body>
+<%new_object = Bending_Unit.new(ARGV[0])%>
+    <h1> <%= new_object.say_hi %> </h1>
+
+    <h1><%= new_object.say_name %></h1>
+    <p>
+      <%=new_object.bend(ARGV[1]) %>
+    </p>
+  </body>
+</html>
