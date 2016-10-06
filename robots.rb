@@ -6,11 +6,9 @@ class Robot
     def initialize(name)
         self.name = name
     end
-
     def say_hi
         'HI'
     end
-
     def say_name
         "My name is #{name}"
     end
